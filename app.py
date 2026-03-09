@@ -6,7 +6,7 @@ import yfinance as yf
 import plotly.graph_objects as go
 
 # Configure Streamlit page settings for a full-width institutional-style dashboard
-st.set_page_config(page_title="Hedge Fund Risk Terminal", layout="wide", page_icon="🏦")
+st.set_page_config(page_title="Hedge Fund Risk Terminal", layout="wide")
 
 # --- APPLICATION HEADER / TERMINAL TITLE ---
 st.title("Institutional Risk & Stress Terminal")
@@ -24,7 +24,7 @@ confidence_level = st.sidebar.slider("Confidence Level (%)", 90, 99, 95)
 # Convert comma-separated asset input into a cleaned list of ticker symbols
 tickers = [t.strip().upper() for t in tickers_input.split(",")]
 
-if st.button("🚨 EXECUTE QUANTITATIVE STRESS TEST"):
+if st.button("EXECUTE QUANTITATIVE STRESS TEST"):
     with st.spinner("Analyzing Global Market Covariance..."):
         
         # 1. DATA ACQUISITION
@@ -58,7 +58,7 @@ if st.button("🚨 EXECUTE QUANTITATIVE STRESS TEST"):
 
         # --- HISTORICAL PERFORMANCE VISUALIZATION ---
         # Plot portfolio equity curve to visualize historical performance and drawdowns
-        st.subheader("📉 Historical Drawdown & Performance")
+        st.subheader("Historical Drawdown & Performance")
         
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=cumulative_returns.index, y=cumulative_returns, name="Portfolio Performance", line=dict(color='#00FFCC')))

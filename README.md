@@ -35,3 +35,13 @@ Interactive dashboard displaying:
 - Daily Value at Risk estimate
 - Historical equity curve
 - Monte Carlo simulation of future portfolio values
+
+## Terminal Interface & Output
+Below is a sample execution of the **Alpha-Macro Engine** performing a 1,000-path stochastic projection and historical drawdown analysis.
+
+![Hedge Fund Terminal Dashboard Preview](dashboard.png)
+
+### Key Analytical Views:
+* **Equity Curve:** Real-time backtesting of portfolio returns over a 12-month horizon.
+* **Monte Carlo Probability Cone:** 1,000 independent price paths generated via Geometric Brownian Motion.
+* **Risk Matrix:** Live calculation of Sharpe Ratio and Parametric Value at Risk (VaR).
